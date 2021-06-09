@@ -7,12 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Stats preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="css/normalise.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -22,22 +17,25 @@
         <div class="imgContainer"></div>
       </div>
       <div class="card__body">
-        <div class="textHeader">
-          <h1>Get <span>insights</span> that help your business grow.</h1>
-        </div>
-        <div class="textBody">
-          <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.
-          </p>
-        </div>
-        <div class="textFooter">
-          <div class="textFooter__item">
-            <p><span>10+</span>companies</p>
+        <h1>
+          Get <span>insights</span> that help your business grow.
+        </h1>
+
+        <p>
+          Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.
+        </p>
+        <div class="card__body__footer">
+          <div class="card__body__footer__item">
+            <strong>10+</strong>
+              <small>companies</small>
           </div>
-          <div class="textFooter__item">
-            <p><span>314</span>templates</p>
+          <div class="card__body__footer__item">
+            <strong>314</strong>
+            <small>templates</small>
           </div>
-          <div class="textFooter__item">
-            <p><span>12m+</span>queries</p>
+          <div class="card__body__footer__item">
+            <strong>12M+</strong>
+              <small>queries</small>
           </div>
         </div>
 

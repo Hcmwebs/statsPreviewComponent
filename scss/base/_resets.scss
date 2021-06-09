@@ -1,6 +1,9 @@
 @use '../abstracts' as *;
 @use'./typo' as *;
 @use '../components' as *;
+
+
+/* === resets === */
 *,
 ::after,
 ::before {
@@ -10,5 +13,5 @@
   width: 90%;
   max-width:$maxWidth;
   @include grid(center);
-  
+
 }

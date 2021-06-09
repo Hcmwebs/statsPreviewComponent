@@ -1,7 +1,9 @@
 @use '../abstracts' as *;
 
+/* === card === */
 .card{
   width:327px;
+  margin: 6rem auto;
   @include flex(column, space-between, center);
   border-radius: $borderRadius;
   overflow: hidden;
@@ -24,20 +26,93 @@
   }
 
   &__body{
+    margin: 0 auto;
     padding: 0 2rem;
-    @include grid(center);
 
-    .textHeader{
+
+    h1{
+      font-size: 28px;
+      font-weight: 700;
       margin-top: 3rem;
-      @include grid(center);
+      text-align: center;
+      line-height: 32px;
+      text-transform: initial;
+      color: $mainHeading;
+    }
+    span{
+      font-size: inherit;
+      font-weight: inherit;
+      color: $accent;
+    }
+
+    p{
+      font-size: 1rem;
+      font-weight: 400;
+      margin: 1.5rem auto;
+      line-height: 25px;
+      text-align: center;
+      color: $mainParagraph;
+    }
+
+    &__footer{
+      width: 100%;
+      margin: 2rem auto;
+      @include flex(column,center,center);
+      gap:2rem;
+
+      &__item{
+        width: 100%;
+        @include flex(column,center,center);
+
+        strong{
+          font-weight: 700;
+          font-size: 24px;
+          color:$statsStrong
+
+        }
+        small{
+          font-size: 12px;
+          letter-spacing:$letterSpacing;
+          line-height: 25px;
+          text-transform:uppercase;
+          color:$statsSmall;
+
+        }
+
+      }
+
+    }
+  }
+}
+
+@media(min-width:$largeScreens){
+  .card{
+    width: 1100px;
+    height: 446px;
+    flex-direction:row-reverse;
+
+    &__header{
+      width: 540px;
+      height: 100%;
+
+      .imgContainer{
+        height: 100%;
+        background:url(/images/image-header-desktop.jpg) no-repeat center center/cover;
+        background-color: $accent;
+        mix-blend-mode: overlay;
+      }
+    }
+    &__body{
+      padding-left: 4.8rem;
+      padding-right: 8.3rem;
+
 
       h1{
-        font-size: 28px;
-        font-weight: 700;
-        text-align: center;
-        line-height: 32px;
-        text-transform: initial;
-        color: $mainHeadingStats;
+        width:380px;
+        margin-top: 5rem;
+        font-size: 36px;
+        text-align: left;
+        line-height: 44px;
       }
       span{
         font-size: inherit;
@@ -45,29 +120,29 @@
         color: $accent;
       }
 
-    }
-    .textBody{
-      @include grid(center);
-
       p{
-        font-family: $fontBody;
-        font-size: 1rem;
-        line-height: 25px;
-        text-align: center;
-        color: $mainParagraph;
+        width: $fixedWidth;
+        text-align: left;
+        margin: 1.5rem auto;
+      }
+      &__footer{
+        width:$fixedWidth;
+        flex-direction: row;
+        justify-content:space-between;
+        margin-bottom: 4rem;
+        &__item {
+          font-family: $font-2;
+          width: auto;
+          align-items:flex-start;
+
+        }
       }
 
-
     }
-    .textFooter{
-      width: 100%;
-      @include flex(column,center,center);
-      gap:2rem;
 
-      &__item{
 
-      }
 
-    }
   }
+
+
 }

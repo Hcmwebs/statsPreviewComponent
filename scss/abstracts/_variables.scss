@@ -12,13 +12,13 @@
   $cardBackground: $darkDesaturatedBlue;
   $accent:$softViolet;
 
-  /*=== Neutral === */
-  $mainHeadingStats: $white;
+  $mainHeading: $white;
+  $statsStrong: $white;
   $mainParagraph: $slightlyTransparentWhite-1;
-  $statHeadings: $slightlyTransparentWhite-2;
+  $statsSmall: $slightlyTransparentWhite-2;
 
   $borderRadius: 8px;
   $letterSpacing: 1px;
   $transition: 0.3s ease-in-out all;
   $maxWidth: 1440px;
-  $fixedWidth: 600px;
+  $fixedWidth: 380px;

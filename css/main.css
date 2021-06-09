@@ -1,9 +1,6 @@
-/* Typography*/
+/* === Typography === */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
-/*=== Primary ===*/
-/*=== Neutral === */
-/*=== Neutral === */
 html {
   font-size: 93.8%;
 }
@@ -11,11 +8,11 @@ html {
 /*15px*/
 body {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   place-items: center;
   background: #090b1a;
-  font-family: "Lexend Deca", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   line-height: 1.75;
   color: rgba(255, 255, 255, 0.75);
@@ -70,131 +67,10 @@ ul {
   padding: 0;
 }
 
-/* buttons */
-.btn {
-  cursor: pointer;
-  color: white;
-  border: transparent;
-  border-radius: 8px;
-  letter-spacing: 1px;
-  padding: 0.375rem 0.75rem;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  transition: 0.3s ease-in-out all;
-  text-transform: capitalize;
-  display: inline-block;
-  /*&:hover {
-    background: $primary-700;
-    box-shadow: $shadow-3;
-  }
-  &-hipster {
-
-    color: $primary-500;
-    background: $primary-200;
-    &:hover {
-
-      color: $primary-200;
-      background: $primary-700;
-    }
-  }*/
-  /*block class is good with forms*/
-}
-.btn-block {
-  width: 100%;
-}
-
-/* alerts */
-/*
-.alert {
-  padding: 0.375rem 0.75rem;
-  margin-bottom: 1rem;
-  border-color: transparent;
-  border-radius: $borderRadius;
-}
-
-.alert-errors {
-  color: $red-dark;
-  background: $red-light;
-}
-
-.alert-success {
-  color: $green-dark;
-  background: $green-light;
-}
-*/
-/* forms */
-.form {
-  width: 90vw;
-  max-width: 600px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  padding: 2rem 2.5rem;
-  margin: 3rem auto;
-}
-
-.form-label {
-  display: block;
-  font-size: 0.7em;
-  margin-bottom: 0.5rem;
-  text-transform: capitalize;
-  letter-spacing: 1px;
-}
-
-.form-input,
-.form-textarea {
-  width: 100%;
-  padding: 0.375rem 0.75rem;
-  border-radius: 8px;
-  background-color: #090b1a;
-  border: 1px solid rgba(255, 255, 255, 0.75);
-}
-
-.form-control {
-  margin-bottom: 1rem;
-}
-
-.form-textarea {
-  height: 7rem;
-}
-
-::placeholder {
-  font-family: inherit;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.form-alert {
-  color: #aa5cdb;
-  letter-spacing: 1px;
-  text-transform: capitalize;
-}
-
-/* titles */
-.title {
-  text-align: center;
-}
-
-.title-underline {
-  background-color: rgba(255, 255, 255, 0.75);
-  width: 7rem;
-  height: 0.25rem;
-  margin: 0 auto;
-  margin-top: -1rem;
-}
-
-/* images */
-.imgContainer {
-  width: 40vw;
-  max-width: 1440px;
-  border-radius: 8px;
-}
-.imgContainer .img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-}
-
+/* === card === */
 .card {
   width: 327px;
+  margin: 6rem auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -218,47 +94,119 @@ ul {
   mix-blend-mode: overlay;
 }
 .card__body {
+  margin: 0 auto;
   padding: 0 2rem;
-  display: grid;
-  place-items: center;
 }
-.card__body .textHeader {
-  margin-top: 3rem;
-  display: grid;
-  place-items: center;
-}
-.card__body .textHeader h1 {
+.card__body h1 {
   font-size: 28px;
   font-weight: 700;
+  margin-top: 3rem;
   text-align: center;
   line-height: 32px;
   text-transform: initial;
   color: white;
 }
-.card__body .textHeader span {
+.card__body span {
   font-size: inherit;
   font-weight: inherit;
   color: #aa5cdb;
 }
-.card__body .textBody {
-  display: grid;
-  place-items: center;
-}
-.card__body .textBody p {
-  font-family: "Lexend Deca", sans-serif;
+.card__body p {
   font-size: 1rem;
+  font-weight: 400;
+  margin: 1.5rem auto;
   line-height: 25px;
   text-align: center;
   color: rgba(255, 255, 255, 0.75);
 }
-.card__body .textFooter {
+.card__body__footer {
   width: 100%;
+  margin: 2rem auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
+.card__body__footer__item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card__body__footer__item strong {
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+}
+.card__body__footer__item small {
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (min-width: 1440px) {
+  .card {
+    width: 1100px;
+    height: 446px;
+    flex-direction: row-reverse;
+  }
+  .card__header {
+    width: 540px;
+    height: 100%;
+  }
+  .card__header .imgContainer {
+    height: 100%;
+    background: url(/images/image-header-desktop.jpg) no-repeat center center/cover;
+    background-color: #aa5cdb;
+    mix-blend-mode: overlay;
+  }
+  .card__body {
+    padding-left: 4.8rem;
+    padding-right: 8.3rem;
+  }
+  .card__body h1 {
+    width: 380px;
+    margin-top: 5rem;
+    font-size: 36px;
+    text-align: left;
+    line-height: 44px;
+  }
+  .card__body span {
+    font-size: inherit;
+    font-weight: inherit;
+    color: #aa5cdb;
+  }
+  .card__body p {
+    width: 380px;
+    text-align: left;
+    margin: 1.5rem auto;
+  }
+  .card__body__footer {
+    width: 380px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+  }
+  .card__body__footer__item {
+    font-family: "Lexend Deca", sans-serif;
+    width: auto;
+    align-items: flex-start;
+  }
+}
+/* === attribution === */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: #3e52a3;
+}
+
+/* === resets === */
 *,
 ::after,
 ::before {
